@@ -14,9 +14,13 @@
             font-family: "Poppins", Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: #fffaf4;
-            color: #33231c;
+            background: #fffaf5;
+            color: #3b2922;
         }
 
         /* NAVBAR */
@@ -28,112 +32,122 @@
             justify-content: space-between;
             align-items: center;
             padding: 18px 8%;
-            background: rgba(255, 250, 244, 0.95);
+            background: rgba(255, 250, 245, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.06);
         }
 
         .logo {
             font-size: 25px;
             font-weight: bold;
-            color: #5b3826;
+            color: #56372a;
         }
 
         .logo span {
-            color: #c47a44;
+            color: #d28a52;
         }
 
         nav a {
             text-decoration: none;
-            color: #5b3826;
+            color: #56372a;
             margin-left: 25px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #c47a44;
+            color: #d28a52;
         }
 
         /* HERO */
         .hero {
-            min-height: 70vh;
+            min-height: 75vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 50px 20px;
-            background: linear-gradient(
-                135deg,
-                #fffaf4,
-                #f5e3ce
-            );
+            background:
+                radial-gradient(circle at top left, #f5dfc8, transparent 35%),
+                linear-gradient(135deg, #fffaf5, #f4e2cf);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .small-title {
+            color: #c77b43;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
         }
 
         .hero h1 {
-            font-size: 55px;
+            font-size: 58px;
             line-height: 1.1;
-            color: #4a2d20;
+            color: #4b2e22;
             margin-bottom: 20px;
         }
 
         .hero h1 span {
-            color: #c47a44;
+            color: #d1844c;
         }
 
         .hero p {
+            color: #806c60;
+            font-size: 18px;
+            line-height: 1.8;
             max-width: 600px;
             margin: auto;
-            color: #806f63;
-            font-size: 18px;
-            line-height: 1.7;
         }
 
         .hero-button {
             display: inline-block;
             margin-top: 30px;
-            padding: 14px 30px;
-            background: #4a2d20;
+            padding: 15px 32px;
+            background: #4b2e22;
             color: white;
-            border-radius: 30px;
             text-decoration: none;
+            border-radius: 50px;
             transition: 0.3s;
         }
 
         .hero-button:hover {
-            background: #c47a44;
+            background: #d1844c;
             transform: translateY(-3px);
         }
 
         /* MENU */
         .menu {
-            padding: 80px 8%;
+            padding: 90px 8%;
         }
 
         .menu-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         .menu-title h2 {
             font-size: 40px;
-            color: #4a2d20;
+            color: #4b2e22;
         }
 
         .menu-title h2 span {
-            color: #c47a44;
+            color: #d1844c;
         }
 
         .menu-title p {
             margin-top: 10px;
-            color: #806f63;
+            color: #806c60;
         }
 
         .menu-container {
+            max-width: 1150px;
+            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 28px;
-            max-width: 1150px;
-            margin: auto;
         }
 
         /* CARD */
@@ -141,20 +155,22 @@
             background: white;
             border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(73, 46, 31, 0.10);
+            box-shadow: 0 10px 30px rgba(75,46,34,0.10);
             transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 18px 35px rgba(73, 46, 31, 0.16);
+            box-shadow: 0 18px 35px rgba(75,46,34,0.16);
         }
 
-        .card img {
-            width: 100%;
+        .food-image {
             height: 250px;
-            object-fit: cover;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            background: linear-gradient(135deg, #f6e4d0, #ead0b5);
         }
 
         .card-content {
@@ -164,11 +180,11 @@
         .card-content h3 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: #4a2d20;
+            color: #4b2e22;
         }
 
         .card-content p {
-            color: #806f63;
+            color: #806c60;
             line-height: 1.6;
             min-height: 52px;
         }
@@ -177,7 +193,7 @@
             margin-top: 18px;
             font-size: 21px;
             font-weight: bold;
-            color: #c47a44;
+            color: #d1844c;
         }
 
         /* BUTTON WHATSAPP */
@@ -188,7 +204,7 @@
             background: #25D366;
             color: white;
             padding: 13px;
-            border-radius: 30px;
+            border-radius: 50px;
             margin-top: 18px;
             font-weight: bold;
             transition: 0.3s;
@@ -202,20 +218,20 @@
         /* CONTACT */
         .contact {
             margin: 20px 8% 70px;
-            padding: 45px 20px;
+            padding: 50px 20px;
             text-align: center;
-            background: #ead5bc;
+            background: #ead5bd;
             border-radius: 30px;
         }
 
         .contact h2 {
             font-size: 30px;
+            color: #4b2e22;
             margin-bottom: 10px;
-            color: #4a2d20;
         }
 
         .contact p {
-            color: #6e5b4d;
+            color: #6f5b4d;
             margin-bottom: 20px;
         }
 
@@ -223,8 +239,8 @@
             display: inline-block;
             background: #25D366;
             color: white;
-            padding: 14px 25px;
-            border-radius: 30px;
+            padding: 14px 28px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -233,12 +249,13 @@
         footer {
             text-align: center;
             padding: 25px;
-            background: #4a2d20;
+            background: #4b2e22;
             color: white;
         }
 
         /* RESPONSIVE */
         @media (max-width: 850px) {
+
             .menu-container {
                 grid-template-columns: 1fr;
                 max-width: 500px;
@@ -253,7 +270,28 @@
             }
 
             nav a {
-                margin-left: 12px;
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav a {
+                margin-left: 7px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 15px;
             }
         }
     </style>
@@ -277,22 +315,30 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <div>
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                WELCOME TO SWEETBITE
+            </div>
+
             <h1>
-                Enak, Manis,<br>
+                Enak, Lezat,<br>
                 <span>Bikin Nagih!</span>
             </h1>
 
             <p>
-                Temukan makanan favoritmu mulai dari
-                martabak asin yang gurih, durian yang legit,
-                hingga mochi yang lembut.
+                Nikmati berbagai pilihan makanan favorit,
+                mulai dari martabak asin yang gurih,
+                durian yang legit, hingga mochi yang lembut.
             </p>
 
             <a href="#menu" class="hero-button">
                 Lihat Menu ↓
             </a>
+
         </div>
+
     </section>
 
 
@@ -300,26 +346,35 @@
     <section class="menu" id="menu">
 
         <div class="menu-title">
-            <h2>Our <span>Menu</span> 🍽️</h2>
-            <p>Pilih menu favoritmu dan langsung pesan!</p>
+
+            <h2>
+                Our <span>Menu</span> 🍽️
+            </h2>
+
+            <p>
+                Pilih makanan favoritmu dan pesan langsung melalui WhatsApp.
+            </p>
+
         </div>
+
 
         <div class="menu-container">
 
-            <!-- MARTABAK ASIN -->
+
+            <!-- MARTABAK -->
             <div class="card">
 
-                <img
-                    src="https://loremflickr.com/800/600/martabak,savory"
-                    alt="Martabak Asin">
+                <div class="food-image">
+                    🥞
+                </div>
 
                 <div class="card-content">
 
-                    <h3>🥞 Martabak Asin</h3>
+                    <h3>Martabak Asin</h3>
 
                     <p>
-                        Martabak gurih dengan isian lezat
-                        dan cocok dinikmati kapan saja.
+                        Martabak gurih dengan isian lezat,
+                        cocok untuk dinikmati bersama keluarga.
                     </p>
 
                     <div class="price">
@@ -331,27 +386,28 @@
                         href="https://wa.me/6281459182491?text=Halo%20Kak%2C%20saya%20ingin%20memesan%20Martabak%20Asin."
                         target="_blank">
 
-                        💬 Pesan Martabak
+                        💬 Pesan Sekarang
                     </a>
 
                 </div>
+
             </div>
 
 
             <!-- DURIAN -->
             <div class="card">
 
-                <img
-                    src="https://loremflickr.com/800/600/durian,fruit"
-                    alt="Buah Durian">
+                <div class="food-image">
+                    🥭
+                </div>
 
                 <div class="card-content">
 
-                    <h3>🥭 Buah Durian</h3>
+                    <h3>Buah Durian</h3>
 
                     <p>
                         Durian pilihan dengan daging buah
-                        yang lembut, legit, dan harum.
+                        lembut, legit, dan memiliki aroma khas.
                     </p>
 
                     <div class="price">
@@ -363,23 +419,24 @@
                         href="https://wa.me/6281459182491?text=Halo%20Kak%2C%20saya%20ingin%20memesan%20Buah%20Durian."
                         target="_blank">
 
-                        💬 Pesan Durian
+                        💬 Pesan Sekarang
                     </a>
 
                 </div>
+
             </div>
 
 
             <!-- MOCHI -->
             <div class="card">
 
-                <img
-                    src="https://loremflickr.com/800/600/mochi,dessert"
-                    alt="Mochi">
+                <div class="food-image">
+                    🍡
+                </div>
 
                 <div class="card-content">
 
-                    <h3>🍡 Mochi</h3>
+                    <h3>Mochi</h3>
 
                     <p>
                         Mochi lembut dan kenyal dengan rasa
@@ -395,30 +452,34 @@
                         href="https://wa.me/6281459182491?text=Halo%20Kak%2C%20saya%20ingin%20memesan%20Mochi."
                         target="_blank">
 
-                        💬 Pesan Mochi
+                        💬 Pesan Sekarang
                     </a>
 
                 </div>
+
             </div>
 
         </div>
+
     </section>
 
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
 
-        <h2>Siap Pesan? 😋</h2>
+        <h2>
+            Mau Pesan? 😋
+        </h2>
 
         <p>
-            Klik tombol WhatsApp untuk langsung menghubungi penjual.
+            Klik tombol di bawah untuk langsung menghubungi penjual.
         </p>
 
         <a
             href="https://wa.me/6281459182491"
             target="_blank">
 
-            💬 +62 814-5918-2491
+            💬 Chat WhatsApp
         </a>
 
     </section>
@@ -426,7 +487,11 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© Alisya Fajri Fitri Nova Ratnasari 🤎</p>
+
+        <p>
+            © Alisya Fajri Fitri Nova Ratnasari• Delicious Food, Good Mood 🤎
+        </p>
+
     </footer>
 
 </body>
