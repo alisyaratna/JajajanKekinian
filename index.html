@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetBite - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf5;
+            color: #29221e;
+        }
+
+        header {
+            background: #29221e;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #e5a86f;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #e5a86f;
+        }
+
+        .hero {
+            min-height: 85vh;
+            padding: 60px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 580px;
+        }
+
+        .hero-text small {
+            color: #c47b43;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .hero-text h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin: 20px 0;
+        }
+
+        .hero-text h1 span {
+            color: #c47b43;
+        }
+
+        .hero-text p {
+            color: #746a63;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #29221e;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+
+        .button:hover {
+            background: #c47b43;
+        }
+
+        .food-circle {
+            width: 360px;
+            height: 360px;
+            background: #f1d2b1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120px;
+            box-shadow: 20px 20px 0 #f7e8da;
+        }
+
+        .about {
+            background: #29221e;
+            color: white;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin: auto;
+            color: #ddd;
+        }
+
+        footer {
+            background: #191512;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .food-circle {
+                width: 270px;
+                height: 270px;
+                font-size: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🍽️ Sweet<span>Bite</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+                <small>FRESH • TASTY • HAPPY</small>
+
+                <h1>
+                    Delicious Food,
+                    <span>Good Mood.</span>
+                </h1>
+
+                <p>
+                    Nikmati berbagai makanan favorit dengan
+                    rasa lezat, tampilan menarik, dan harga
+                    yang bersahabat.
+                </p>
+
+                <a href="menu.html" class="button">
+                    Lihat Menu →
+                </a>
+            </div>
+
+            <div class="food-circle">
+                🥟
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+
+            <h2>Simple Food, Big Happiness.</h2>
+
+            <p>
+                SweetBite menghadirkan pilihan makanan kekinian
+                yang cocok untuk menemani waktu santai bersama
+                keluarga maupun teman.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© Alisya Fajri Fitri Nova Ratnasari| Delicious Food, Good Mood.</p>
+    </footer>
+
+</body>
+</html>
