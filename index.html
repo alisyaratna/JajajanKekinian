@@ -3,243 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RasaKita - Kuliner Lezat</title>
+
+    <title>SweetBite | Menu Makanan</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", Arial, sans-serif;
         }
 
         body {
-            background: #fffaf2;
-            color: #33251f;
+            background: #fffaf4;
+            color: #33231c;
         }
 
-        header {
-            width: 100%;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        /* NAVBAR */
+        nav {
             position: sticky;
             top: 0;
             z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: rgba(255, 250, 244, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 25px;
             font-weight: bold;
+            color: #5b3826;
         }
 
         .logo span {
-            color: #b86b35;
+            color: #c47a44;
         }
 
         nav a {
             text-decoration: none;
-            color: #33251f;
+            color: #5b3826;
             margin-left: 25px;
             font-weight: bold;
         }
 
         nav a:hover {
-            color: #b86b35;
+            color: #c47a44;
         }
 
+        /* HERO */
         .hero {
-            min-height: 88vh;
+            min-height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 30px;
-            background:
-                linear-gradient(rgba(255,250,242,0.85), rgba(255,250,242,0.95)),
-                url("https://loremflickr.com/1600/900/food") center/cover;
+            padding: 50px 20px;
+            background: linear-gradient(
+                135deg,
+                #fffaf4,
+                #f5e3ce
+            );
         }
 
         .hero h1 {
             font-size: 55px;
-            margin-bottom: 15px;
+            line-height: 1.1;
+            color: #4a2d20;
+            margin-bottom: 20px;
         }
 
         .hero h1 span {
-            color: #b86b35;
+            color: #c47a44;
         }
 
         .hero p {
+            max-width: 600px;
+            margin: auto;
+            color: #806f63;
             font-size: 18px;
-            color: #74665e;
-            margin-bottom: 30px;
+            line-height: 1.7;
         }
 
-        .button {
+        .hero-button {
             display: inline-block;
+            margin-top: 30px;
             padding: 14px 30px;
-            background: #33251f;
+            background: #4a2d20;
             color: white;
-            text-decoration: none;
             border-radius: 30px;
+            text-decoration: none;
             transition: 0.3s;
         }
 
-        .button:hover {
-            background: #b86b35;
+        .hero-button:hover {
+            background: #c47a44;
             transform: translateY(-3px);
         }
 
-        footer {
-            background: #33251f;
-            color: white;
+        /* MENU */
+        .menu {
+            padding: 80px 8%;
+        }
+
+        .menu-title {
             text-align: center;
-            padding: 25px;
+            margin-bottom: 45px;
         }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="logo">Rasa<span>Kita</span> 🍴</div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div>
-            <h1>Rasa Enak,<br><span>Bikin Nagih!</span></h1>
-
-            <p>
-                Nikmati berbagai pilihan makanan favorit
-                dengan rasa yang istimewa.
-            </p>
-
-            <a href="menu.html" class="button">
-                Lihat Menu →
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 RasaKita • Lezat Setiap Saat ❤️</p>
-    </footer>
-
-</body>
-</html>    
-
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RasaKita - Menu</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        .menu-title h2 {
+            font-size: 40px;
+            color: #4a2d20;
         }
 
-        body {
-            background: #fffaf2;
-            color: #33251f;
+        .menu-title h2 span {
+            color: #c47a44;
         }
 
-        header {
-            width: 100%;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #b86b35;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #33251f;
-            margin-left: 25px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #b86b35;
-        }
-
-        .judul {
-            text-align: center;
-            padding: 60px 20px 35px;
-        }
-
-        .judul h1 {
-            font-size: 43px;
-            margin-bottom: 10px;
-        }
-
-        .judul h1 span {
-            color: #b86b35;
-        }
-
-        .judul p {
-            color: #74665e;
-            font-size: 17px;
+        .menu-title p {
+            margin-top: 10px;
+            color: #806f63;
         }
 
         .menu-container {
-            width: 85%;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            padding-bottom: 60px;
+            gap: 28px;
+            max-width: 1150px;
+            margin: auto;
         }
 
+        /* CARD */
         .card {
             background: white;
-            border-radius: 22px;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(70,45,30,0.10);
+            box-shadow: 0 10px 30px rgba(73, 46, 31, 0.10);
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(70,45,30,0.16);
+            transform: translateY(-10px);
+            box-shadow: 0 18px 35px rgba(73, 46, 31, 0.16);
         }
 
         .card img {
@@ -250,104 +158,102 @@
         }
 
         .card-content {
-            padding: 23px;
+            padding: 25px;
         }
 
-        .card h2 {
+        .card-content h3 {
             font-size: 24px;
             margin-bottom: 10px;
+            color: #4a2d20;
         }
 
-        .card p {
-            color: #74665e;
+        .card-content p {
+            color: #806f63;
             line-height: 1.6;
-            margin-bottom: 18px;
+            min-height: 52px;
         }
 
         .price {
-            font-size: 20px;
+            margin-top: 18px;
+            font-size: 21px;
             font-weight: bold;
-            color: #b86b35;
-            margin-bottom: 17px;
+            color: #c47a44;
         }
 
+        /* BUTTON WHATSAPP */
         .order {
-            display: inline-block;
+            display: block;
+            text-align: center;
             text-decoration: none;
-            background: #33251f;
+            background: #25D366;
             color: white;
-            padding: 11px 20px;
-            border-radius: 25px;
+            padding: 13px;
+            border-radius: 30px;
+            margin-top: 18px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
         .order:hover {
-            background: #25D366;
+            background: #1da851;
+            transform: scale(1.03);
         }
 
+        /* CONTACT */
         .contact {
-            width: 85%;
-            margin: 10px auto 60px;
-            padding: 30px;
+            margin: 20px 8% 70px;
+            padding: 45px 20px;
             text-align: center;
-            background: #efe0c8;
-            border-radius: 22px;
+            background: #ead5bc;
+            border-radius: 30px;
         }
 
         .contact h2 {
+            font-size: 30px;
             margin-bottom: 10px;
+            color: #4a2d20;
         }
 
         .contact p {
-            color: #62544c;
-            margin-bottom: 18px;
+            color: #6e5b4d;
+            margin-bottom: 20px;
         }
 
-        .wa {
+        .contact a {
             display: inline-block;
             background: #25D366;
             color: white;
-            text-decoration: none;
-            padding: 13px 25px;
+            padding: 14px 25px;
             border-radius: 30px;
+            text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        .wa:hover {
-            transform: scale(1.05);
-        }
-
+        /* FOOTER */
         footer {
-            background: #33251f;
-            color: white;
             text-align: center;
             padding: 25px;
+            background: #4a2d20;
+            color: white;
         }
 
-        @media (max-width: 900px) {
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
             .menu-container {
                 grid-template-columns: 1fr;
-                width: 90%;
+                max-width: 500px;
             }
 
-            .card img {
-                height: 280px;
+            .hero h1 {
+                font-size: 42px;
             }
-        }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
+            nav {
+                padding: 18px 5%;
             }
 
             nav a {
-                margin: 0 8px;
-            }
-
-            .judul h1 {
-                font-size: 35px;
+                margin-left: 12px;
             }
         }
     </style>
@@ -355,134 +261,172 @@
 
 <body>
 
-    <header>
-        <div class="logo">Rasa<span>Kita</span> 🍴</div>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            Sweet<span>Bite</span> ✨
+        </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-        </nav>
-    </header>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
 
-    <section class="judul">
-        <h1>Menu <span>Favorit</span> ✨</h1>
-        <p>Pilih makanan favoritmu dan nikmati kelezatannya.</p>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div>
+            <h1>
+                Enak, Manis,<br>
+                <span>Bikin Nagih!</span>
+            </h1>
+
+            <p>
+                Temukan makanan favoritmu mulai dari
+                martabak asin yang gurih, durian yang legit,
+                hingga mochi yang lembut.
+            </p>
+
+            <a href="#menu" class="hero-button">
+                Lihat Menu ↓
+            </a>
+        </div>
     </section>
 
 
-    <section class="menu-container">
+    <!-- MENU -->
+    <section class="menu" id="menu">
 
-        <!-- MOCHI -->
-        <div class="card">
+        <div class="menu-title">
+            <h2>Our <span>Menu</span> 🍽️</h2>
+            <p>Pilih menu favoritmu dan langsung pesan!</p>
+        </div>
 
-            <img 
-                src="https://loremflickr.com/800/600/mochi"
-                alt="Gambar Mochi">
+        <div class="menu-container">
 
-            <div class="card-content">
-                <h2>🍡 MOCHI</h2>
+            <!-- MARTABAK ASIN -->
+            <div class="card">
 
-                <p>
-                    Mochi lembut dengan tekstur kenyal
-                    dan rasa manis yang menggugah selera.
-                </p>
+                <img
+                    src="https://loremflickr.com/800/600/martabak,savory"
+                    alt="Martabak Asin">
 
-                <div class="price">
-                    Rp15.000
+                <div class="card-content">
+
+                    <h3>🥞 Martabak Asin</h3>
+
+                    <p>
+                        Martabak gurih dengan isian lezat
+                        dan cocok dinikmati kapan saja.
+                    </p>
+
+                    <div class="price">
+                        Rp30.000
+                    </div>
+
+                    <a
+                        class="order"
+                        href="https://wa.me/6281459182491?text=Halo%20Kak%2C%20saya%20ingin%20memesan%20Martabak%20Asin."
+                        target="_blank">
+
+                        💬 Pesan Martabak
+                    </a>
+
                 </div>
+            </div>
 
-                <a 
-                    class="order"
-                    href="https://wa.me/6281459182491?text=Halo%20saya%20ingin%20memesan%20Mochi">
-                    Pesan Sekarang
-                </a>
+
+            <!-- DURIAN -->
+            <div class="card">
+
+                <img
+                    src="https://loremflickr.com/800/600/durian,fruit"
+                    alt="Buah Durian">
+
+                <div class="card-content">
+
+                    <h3>🥭 Buah Durian</h3>
+
+                    <p>
+                        Durian pilihan dengan daging buah
+                        yang lembut, legit, dan harum.
+                    </p>
+
+                    <div class="price">
+                        Rp25.000
+                    </div>
+
+                    <a
+                        class="order"
+                        href="https://wa.me/6281459182491?text=Halo%20Kak%2C%20saya%20ingin%20memesan%20Buah%20Durian."
+                        target="_blank">
+
+                        💬 Pesan Durian
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- MOCHI -->
+            <div class="card">
+
+                <img
+                    src="https://loremflickr.com/800/600/mochi,dessert"
+                    alt="Mochi">
+
+                <div class="card-content">
+
+                    <h3>🍡 Mochi</h3>
+
+                    <p>
+                        Mochi lembut dan kenyal dengan rasa
+                        manis yang cocok untuk teman santai.
+                    </p>
+
+                    <div class="price">
+                        Rp15.000
+                    </div>
+
+                    <a
+                        class="order"
+                        href="https://wa.me/6281459182491?text=Halo%20Kak%2C%20saya%20ingin%20memesan%20Mochi."
+                        target="_blank">
+
+                        💬 Pesan Mochi
+                    </a>
+
+                </div>
             </div>
 
         </div>
-
-
-        <!-- DURIAN -->
-        <div class="card">
-
-            <img 
-                src="https://loremflickr.com/800/600/durian"
-                alt="Gambar Buah Durian">
-
-            <div class="card-content">
-                <h2>🥭 BUAH DURIAN</h2>
-
-                <p>
-                    Buah durian pilihan dengan daging buah
-                    lembut, legit, dan aroma khas.
-                </p>
-
-                <div class="price">
-                    Rp25.000
-                </div>
-
-                <a 
-                    class="order"
-                    href="https://wa.me/6281459182491?text=Halo%20saya%20ingin%20memesan%20Buah%20Durian">
-                    Pesan Sekarang
-                </a>
-            </div>
-
-        </div>
-
-
-        <!-- MARTABAK ASIN -->
-        <div class="card">
-
-            <img 
-                src="https://loremflickr.com/800/600/martabak"
-                alt="Gambar Martabak Asin">
-
-            <div class="card-content">
-                <h2>🥞 MARTABAK ASIN</h2>
-
-                <p>
-                    Martabak asin yang gurih dengan isian
-                    lezat dan cocok dinikmati kapan saja.
-                </p>
-
-                <div class="price">
-                    Rp30.000
-                </div>
-
-                <a 
-                    class="order"
-                    href="https://wa.me/6281459182491?text=Halo%20saya%20ingin%20memesan%20Martabak%20Asin">
-                    Pesan Sekarang
-                </a>
-            </div>
-
-        </div>
-
     </section>
 
 
-    <!-- KONTAK -->
-    <section class="contact">
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
 
-        <h2>Ingin Pesan? 😋</h2>
+        <h2>Siap Pesan? 😋</h2>
 
         <p>
-            Hubungi kami melalui WhatsApp untuk melakukan pemesanan.
+            Klik tombol WhatsApp untuk langsung menghubungi penjual.
         </p>
 
-        <a 
-            class="wa"
+        <a
             href="https://wa.me/6281459182491"
             target="_blank">
-            💬 WhatsApp: +62 814-5918-2491
+
+            💬 +62 814-5918-2491
         </a>
 
     </section>
 
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 RasaKita • Enak, Segar & Bikin Nagih ❤️</p>
+        <p>© 2026 Alisya Fajri Fitri Nova Ratnasari• Delicious Food, Good Mood 🤎</p>
     </footer>
 
 </body>
