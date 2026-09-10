@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SweetBite - Home</title>
+    <title>SweetBite - Menu</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -49,81 +48,105 @@
             color: #e5a86f;
         }
 
-        .hero {
-            min-height: 85vh;
-            padding: 60px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
+        .title {
+            text-align: center;
+            padding: 70px 20px 40px;
         }
 
-        .hero-text {
-            max-width: 580px;
-        }
-
-        .hero-text small {
+        .title small {
             color: #c47b43;
             letter-spacing: 3px;
             font-weight: bold;
         }
 
-        .hero-text h1 {
-            font-size: 58px;
-            line-height: 1.1;
-            margin: 20px 0;
+        .title h1 {
+            font-size: 45px;
+            margin: 15px 0;
         }
 
-        .hero-text h1 span {
-            color: #c47b43;
+        .title p {
+            color: #756b65;
         }
 
-        .hero-text p {
-            color: #746a63;
-            font-size: 17px;
-            margin-bottom: 30px;
+        .menu {
+            padding: 20px 8% 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 14px 25px;
-            background: #29221e;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #eee3da;
+            transition: 0.3s;
         }
 
-        .button:hover {
-            background: #c47b43;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .food-circle {
-            width: 360px;
-            height: 360px;
-            background: #f1d2b1;
-            border-radius: 50%;
+        .food-image {
+            height: 190px;
+            border-radius: 16px;
+            background: #f3dfcd;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 120px;
-            box-shadow: 20px 20px 0 #f7e8da;
+            font-size: 85px;
+            margin-bottom: 20px;
         }
 
-        .about {
+        .card h2 {
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: #c47b43;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .order {
             background: #29221e;
             color: white;
-            padding: 70px 8%;
+            text-decoration: none;
+            padding: 9px 17px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .order:hover {
+            background: #c47b43;
+        }
+
+        .info {
+            background: #29221e;
+            color: white;
             text-align: center;
+            padding: 60px 8%;
         }
 
-        .about h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
+        .info h2 {
+            margin-bottom: 10px;
         }
 
-        .about p {
-            max-width: 650px;
-            margin: auto;
+        .info p {
             color: #ddd;
         }
 
@@ -144,19 +167,12 @@
                 margin: 0 7px;
             }
 
-            .hero {
-                flex-direction: column;
-                text-align: center;
+            .menu {
+                grid-template-columns: 1fr;
             }
 
-            .hero-text h1 {
-                font-size: 42px;
-            }
-
-            .food-circle {
-                width: 270px;
-                height: 270px;
-                font-size: 90px;
+            .title h1 {
+                font-size: 35px;
             }
         }
     </style>
@@ -165,52 +181,112 @@
 <body>
 
     <header>
-        <div class="logo">🍽️ Sweet<span>Bite</span></div>
+
+        <div class="logo">
+            🍽️ Sweet<span>Bite</span>
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
-            <a href="#about">About</a>
+            <a href="index.html#about">About</a>
         </nav>
+
     </header>
 
     <main>
 
-        <section class="hero">
+        <section class="title">
 
-            <div class="hero-text">
-                <small>FRESH • TASTY • HAPPY</small>
+            <small>OUR SPECIAL MENU</small>
 
-                <h1>
-                    Delicious Food,
-                    <span>Good Mood.</span>
-                </h1>
+            <h1>Pick Your Favorite ✨</h1>
 
-                <p>
-                    Nikmati berbagai makanan favorit dengan
-                    rasa lezat, tampilan menarik, dan harga
-                    yang bersahabat.
-                </p>
-
-                <a href="menu.html" class="button">
-                    Lihat Menu →
-                </a>
-            </div>
-
-            <div class="food-circle">
-                🥟
-            </div>
+            <p>
+                Tiga pilihan lezat untuk menemani
+                waktu santaimu.
+            </p>
 
         </section>
 
-        <section class="about" id="about">
 
-            <h2>Simple Food, Big Happiness.</h2>
+        <section class="menu">
+
+            <!-- MOCHI -->
+            <article class="card">
+
+                <div class="food-image">
+                    🍡
+                </div>
+
+                <h2>Mochi</h2>
+
+                <p>
+                    Mochi lembut dengan tekstur kenyal
+                    dan isian manis yang menggugah selera.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">Rp15.000</span>
+                    <a href="#" class="order">Order</a>
+                </div>
+
+            </article>
+
+
+            <!-- DURIAN -->
+            <article class="card">
+
+                <div class="food-image">
+                    🥭
+                </div>
+
+                <h2>Durian</h2>
+
+                <p>
+                    Durian pilihan dengan aroma khas
+                    dan rasa legit yang nikmat.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">Rp25.000</span>
+                    <a href="#" class="order">Order</a>
+                </div>
+
+            </article>
+
+
+            <!-- MARTABAK ASIN -->
+            <article class="card">
+
+                <div class="food-image">
+                    🥞
+                </div>
+
+                <h2>Martabak Asin</h2>
+
+                <p>
+                    Martabak gurih dengan isian telur,
+                    daging, daun bawang, dan bumbu spesial.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">Rp30.000</span>
+                    <a href="#" class="order">Order</a>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <section class="info">
+
+            <h2>Hungry? Let's Eat! 😋</h2>
 
             <p>
-                SweetBite menghadirkan pilihan makanan kekinian
-                yang cocok untuk menemani waktu santai bersama
-                keluarga maupun teman.
+                Pilih menu favoritmu dan nikmati
+                kelezatannya bersama orang tersayang.
             </p>
 
         </section>
@@ -218,7 +294,7 @@
     </main>
 
     <footer>
-        <p>© Alisya Fajri Fitri Nova Ratnasari| Delicious Food, Good Mood.</p>
+        <p>© 2026 SweetBite | Fresh • Tasty • Happy</p>
     </footer>
 
 </body>
